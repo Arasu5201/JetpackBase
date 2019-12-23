@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Flyy Ride</string>
+    <string name="jetpack_base">JetPackBase</string>
+    <string name="home_title">Home</string>
+    <string name="plans_title">Plans</string>
+    <string name="create_plan_title">Create Plan</string>
+    <string name="service_agent_app">Service Agent App</string>
+    <string name="login">Login</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="completed_title">Completed</string>
+    <string name="settings_title">Settings</string>
+    <string name="completed_detail">CompletedDetail</string>
+    <string name="pull_down">Pull down to Refresh</string>
+    <string name="change_password">Change Password</string>
+    <string name="help"><![CDATA[Help & FAQ]]></string>
+    <string name="logout">Logout</string>
+    <string name="description">Description</string>
+    <string name="dummy_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sit aliqua. Ut enim ad minim veniam, quis laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="dummy_vehicle_no">TN 05 AB 1234</string>
+    <string name="dummy_issue_date">25th May</string>
+    <string name="dummy_issue_name">Battery Issue</string>
+    <string name="location">Location</string>
+    <string name="dummy_address">160/12, R.K Salai, Nungambakkam, Chennai 600031</string>
+    <string name="navigate">Navigate</string>
+    <string name="write_notes">Write Notes</string>
+    <string name="hint_write_comments">Write / Comments</string>
+    <string name="mark_as_completed">MARK AS COMPLETED</string>
+    <string name="issue_detail">Issue Detail</string>
+    <string name="notes">Notes</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="re_new_password">Re-enter New Password</string>
+    <string name="help_faq"><![CDATA[Help & FAQ]]></string>
+</resources>

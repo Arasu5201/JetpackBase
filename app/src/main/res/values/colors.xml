@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ECECEC</color>
+    <color name="colorPrimaryDark">#ECECEC</color>
+    <color name="colorAccent">#272727</color>
+    <color name="btn_bg">#272727</color>
+    <color name="btn_navigation_selected_color">#3783F5</color>
+    <color name="btn_navigation_unselected_color">#747474</color>
+    <color name="btn_navigation_bg">#ECECEC</color>
+    <color name="secondary_text_color">#858585</color>
+    <color name="date_color">#2C2C2C</color>
+    <color name="issue_title_color">#0C0C0C</color>
+    <color name="issue_date_color">#444444</color>
+    <color name="divider_color">#CBCBCB</color>
+    <color name="logout_color">#D63434</color>
+    <color name="app_color">#3783F5</color>
+    <color name="navigate_color">#3783F5</color>
+    <color name="help_faq">#F6F6F6</color>
+    <color name="light_grey">#dbdbdb</color>
+    <color name="help_faq_text">#686868</color>
+</resources>

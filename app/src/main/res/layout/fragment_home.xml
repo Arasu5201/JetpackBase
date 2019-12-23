@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+>
+    <data>
+        <variable name="listener"
+                  type="com.android.jetpackbase.features.home.HomeViewModel"/>
+        <variable name="issueAdapter"
+                  type="com.android.jetpackbase.adapter.IssueAdapter"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/tvPullDownRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/pull_down"
+                style="@style/TextMedium12"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/secondary_text_color"
+                android:layout_marginTop="@dimen/dp_16"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHome"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvPullDownRefresh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:listitem="@layout/inflate_issue_item"
+                tools:itemCount="10"
+                android:adapter="@{issueAdapter}"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

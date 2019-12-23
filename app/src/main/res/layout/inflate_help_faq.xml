@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <data>
+        <variable
+                name="helpFaqData"
+                type="com.android.jetpackbase.model.HelpFaqData" />
+
+        <variable
+                name="listener"
+                type="com.android.jetpackbase.adapter.listener.OnHelpFaqItemClickListener" />
+
+        <import type="android.view.View"/>
+        <variable
+                name="isVisible"
+                type="java.lang.Boolean"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_bg_edit_text"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:animateLayoutChanges="true"
+    >
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="@dimen/dp_18"
+                android:paddingEnd="@dimen/dp_18"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:background="@color/help_faq"
+                style="@style/TextMedium16"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@{helpFaqData.question}"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:layout_margin="@dimen/dp_2"
+        />
+        <View
+                android:id="@+id/vDivider"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/light_grey"
+        />
+        <TextView
+                android:id="@+id/tvFaqAnswer"
+                app:layout_constraintTop_toBottomOf="@+id/vDivider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="@dimen/dp_16"
+                style="@style/TextMedium12"
+                android:textColor="@color/help_faq_text"
+                android:text="@{helpFaqData.answer}"
+                android:visibility="@{isVisible ? View.GONE : View.VISIBLE}"
+        />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

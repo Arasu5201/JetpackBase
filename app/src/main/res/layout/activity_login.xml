@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/mlLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutDescription="@xml/login_scene">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogin"
+                style="@style/TextMedium18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:letterSpacing="0.1"
+                android:lineSpacingMultiplier="2.5"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.060000002" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etUserName"
+                style="@style/TextMedium14"
+                android:layout_width="@dimen/dp_295"
+                android:layout_height="@dimen/dp_50"
+                android:background="@drawable/rectangle_bg_edit_text"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/user_name"
+                android:padding="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLogin"
+                app:layout_constraintVertical_bias="0.1" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                style="@style/TextMedium14"
+                android:layout_width="@dimen/dp_295"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/rectangle_bg_edit_text"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/password"
+                android:padding="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etUserName" />
+
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/dp_295"
+                android:layout_height="@dimen/dp_50"
+                android:onClick="navigateToMainActivity"
+                android:text="@string/login"
+                android:theme="@style/AppTheme.Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword"
+                app:layout_constraintVertical_bias="0.16000003" />
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

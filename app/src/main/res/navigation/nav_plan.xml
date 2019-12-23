@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:id="@+id/nav_plan"
+        app:startDestination="@+id/home_fragment">
+    <fragment
+            android:id="@+id/home_fragment"
+            android:name="com.android.jetpackbase.features.home.HomeFragment"
+            android:label="@string/home_title"
+            tool:layout="@layout/fragment_home">
+        <!-- <action android:id="@+id/action_home_fragment_to_completed_fragment"
+                 app:destination="@id/completed_fragment"
+         />-->
+        <action
+                android:id="@+id/action_home_fragment_to_issue_detail_fragment"
+                app:destination="@id/issue_detail_fragment" />
+        <argument
+                android:name="issueData"
+                app:argType="com.android.jetpackbase.model.IssueData" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/issue_detail_fragment"
+            android:name="com.android.jetpackbase.features.issuedetails.IssueDetailFragment"
+            android:label="@string/issue_detail"
+            tool:layout="@layout/fragment_issue_detail"/>
+
+    <fragment
+            android:id="@+id/completed_fragment"
+            android:name="com.android.jetpackbase.features.completedList.CompletedFragment"
+            android:label="@string/completed_title"
+            tool:layout="@layout/fragment_completed">
+
+        <action
+                android:id="@+id/action_completed_fragment_to_completedDetailFragment"
+                app:destination="@id/completedDetailFragment" />
+        <argument
+                android:name="CompletedIssueData"
+                app:argType="com.android.jetpackbase.model.CompletedIssueData" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/completedDetailFragment"
+            android:name="com.android.jetpackbase.features.completeddetails.CompletedDetailFragment"
+            android:label="@string/completed_detail"
+            tool:layout="@layout/fragment_completed_detail">
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/settings_fragment"
+            android:name="com.android.jetpackbase.features.settings.SettingsFragment"
+            android:label="@string/settings_title"
+            tool:layout="@layout/fragment_settings">
+        <action
+                android:id="@+id/action_settings_fragment_to_changePasswordFragment"
+                app:destination="@id/change_password_fragment" />
+        <action
+                android:id="@+id/action_settings_fragment_to_helpAndFaqFragment"
+                app:destination="@id/help_and_faq_fragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/change_password_fragment"
+            android:name="com.android.jetpackbase.features.changepassword.ChangePasswordFragment"
+            android:label="@string/change_password"
+            tool:layout="@layout/fragment_change_password" />
+    <fragment
+            android:id="@+id/help_and_faq_fragment"
+            android:name="com.android.jetpackbase.features.helpfaq.HelpAndFaqFragment"
+            android:label="@string/help_faq"
+            tool:layout="@layout/fragment_help_faq" />
+
+
+</navigation>
